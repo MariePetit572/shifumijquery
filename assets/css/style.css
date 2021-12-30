@@ -1,0 +1,569 @@
+*, ::before, ::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face{
+    font-family:'waltograph';
+    src: url(../font/waltograph42.otf);
+}
+
+body{
+    background-color: #0B091F;
+    width:100vw;
+    height:100%;
+}
+
+.textPrincessMobile {
+    display:none;
+}
+
+/* TYPOGRAPHIE */
+h1{
+    font-family: "waltograph",cursive;
+    font-size: 5em;
+    background:linear-gradient(90deg,#3cc0f8 0%,#d62566 100%);
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+h2{
+    font-family:'noto sans',sans-serif;
+}
+
+.title p {
+    font-size : 1.5em;
+    font-family:'noto sans',sans-serif;
+}
+
+.textPrincess {
+    font-family:'noto sans',sans-serif;
+    line-height: 2em;
+    padding-top:50px;
+}
+
+.textPrincess h3 {
+    line-height: 3em;
+}
+
+
+.textPrincess h3 span {
+    font-family: "waltograph",cursive;
+    font-size: 2em;
+}
+
+#elsaTitle{
+    color: #6E9BAF;   
+}
+#raiponceTitle{
+    color: #CD7394;
+}
+#mulanTitle{
+    color:#94C570;
+}
+
+.textPrincess {
+    color: white;
+}
+
+#result {
+    padding-top:20px;
+    font-size: 3em;
+    font-family: "waltograph",cursive;
+    color:#94C570;
+    
+}
+
+
+/* FIN TYPOGRAPHIE */
+
+
+.imgprinc{
+    width:233px;
+    height: 250px;
+}
+.containerMain{
+    display: grid;
+    grid-template-rows: 1fr, 1fr;
+    grid-template-columns:1fr, 2fr, 1fr;
+    color: white;
+}
+.title{
+    grid-row: 1/2;
+    grid-column: 2/3;
+    text-align: center;
+}
+.compteUser{
+    grid-row: 2/3;
+    grid-column: 1/2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#user, #comp{
+    color: white;
+    font-size: 2.5em;
+    padding-top: 5px;
+    font-family: 'Noto Sans';
+}
+.fa-user,.fa-desktop{
+    font-size: 2.5em;
+}
+.compteComp{
+    grid-row: 2/3;
+    grid-column: 3/4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.containerPrincesses{
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns:1fr, 1fr, 1fr;
+    
+}
+
+
+.elsa{
+    grid-row: 1/2;
+    grid-column: 1/2;
+    display: flex;
+}
+
+.raiponce{
+    grid-row: 1/2;
+    grid-column: 2/3;
+    display: flex;
+}
+.mulan{
+    grid-row: 1/2;
+    grid-column: 3/4;
+    display: flex;
+}
+
+.arene {
+    grid-row: 2/3;
+    grid-column: 2/3;
+    position:relative;
+    height : 600px;
+}
+
+.arene img{
+    left:50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    position:absolute;
+    
+}
+
+#earLeft {
+border-color: white;
+border-style: solid;
+border-width: 10px;
+border-radius: 50%;
+width: 200px;
+height:200px;
+position: absolute;
+top : 40px;
+left : 150px;
+}
+
+#earRight{
+border-color: white;
+border-style: solid;
+border-width: 10px;
+border-radius: 50%;
+width: 200px;
+height:200px;
+position: absolute;
+top : 40px;
+right : 150px;
+    }
+
+#head {
+    border-color: white;
+    border-style: solid;
+    border-width: 10px;
+    border-radius: 50%;
+    width: 400px;
+    height:400px;
+    position: absolute;
+    left:50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    }
+    #matchNul{
+        display:none;
+        font-family: 'waltograph';
+    }
+
+
+
+
+.imgprinc {
+    cursor: pointer;
+}
+
+/* MEDIA QUERIES */
+
+
+
+/* version Grand écran : le texte en dessous des princesses */
+@media screen and (max-width:1551px){
+
+    #earLeft {
+        left : 65px;
+    }
+    #earRight{
+        right : 65px;
+    }
+            
+    #head {
+        top:300px;
+    } 
+    }
+
+/* fin version Grand écran : le texte en dessous des princesses */   
+
+
+/* version Laptop : modification arène */
+@media screen and (max-width:1441px){
+
+
+    .mulan, .raiponce, .elsa{
+        display: flex;
+        flex-direction: column;
+        text-align:center;
+    }
+
+/* version Laptop : modification arène */  
+
+
+/* version intermédiaire Ecran moyen (remplace le texte des princesses par une règle du jeu et on affiche les images de profil */
+@media screen and (max-width:951px){
+
+    #earLeft {
+        left : 150px;
+    }
+    .containerMain{
+        grid-template-rows: 1fr, 1fr, 1fr, 1fr;
+        grid-template-columns:1fr;
+    }
+    
+    .textPrincessMobile {
+        display:block;
+    }
+    
+    .textPrincess{
+        display: none;
+    }
+    
+    .title{
+        grid-row: 1/2;
+        grid-column: 1/2;
+        text-align: center;
+    }
+    .compteUser{
+        grid-row: 2/3;
+        grid-column: 1/2;
+        display:flex;
+        flex-direction: row;
+        justify-content: space-around;
+        
+    }
+    .compteComp{
+        grid-row: 3/4;
+        grid-column: 1/2;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .arene {
+        grid-row: 4/5;
+        grid-column: 1/2;
+        position:relative;
+        height : 500px;
+        }
+        .containerPrincesses{
+            display: flex;
+            justify-content: space-around;   
+        }
+        #elsaPlayer{
+            content: url('../img/elsa_mobile.png');
+        }
+        #raiponcePlayer{
+            content: url('../img/raiponce_mobile.png');
+        }
+        #mulanPlayer{
+            content:url('../img/mulan_mobile.png');
+        }    
+        .imgprinc{
+            width:120px;
+            height:120px;  
+        }
+        h1{
+            font-family: "waltograph",cursive;
+            font-size: 4em;
+        }
+        h2, .title p{
+            font-size:1em;
+        }
+        .title {
+            padding-bottom: 25px;
+        }
+        .fa-user,.fa-desktop{
+            font-size: 2em;
+            line-height: 1.5em;
+            padding-top: 5px;
+            margin-left: 280px;
+        }
+    
+        #user, #comp{
+            font-size: 2em;
+            line-height: 1.5em;
+            padding-top: 5px;
+            margin-right:280px;
+        }
+        
+        #earLeft {
+        border-width: 5px;
+        width: 180px;
+        height:180px;
+        top : 20px;
+        left : 145px;
+        }
+        
+        #earRight{
+        border-width: 5px;
+        width: 180px;
+        height:180px;
+        top : 20px;
+        right : 145px;
+            }
+        
+        #head {
+            border-width: 5px;
+            width: 350px;
+            height:350px;
+            top:245px;
+                    }
+        #imgHead {
+            width:150px;}
+    
+        .textPrincessMobile {
+            font-family:'noto sans',sans-serif;
+            line-height: 1.5em;
+            padding-top:15px;
+            text-align: center;
+            color: white;
+            padding-bottom: 15px;
+            }
+            
+        .textPrincessMobile h3 {
+            line-height: 2em;
+            }
+            
+        .textPrincessMobile h3 span {
+            font-family: "waltograph",cursive;
+            font-size: 2em;
+            }
+    
+        .textPrincessMobile p {
+            line-height: 2em;
+            }
+    
+            #regles {
+                font-size:4em;
+                font-family: "waltograph",cursive;
+                color: white;
+                text-align: center;
+                padding-top:15px;
+                background:linear-gradient(90deg,#3cc0f8 0%,#d62566 100%);
+                background-clip: border-box;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent; }
+            
+                #result {
+                font-size: 3em;}
+     }
+
+/* fin version intermédiaire */ 
+
+  /* version Ipad 768px (modification arène) */
+  @media screen and (max-width:769px){
+
+#earLeft {
+    left : 85px;
+}
+#earRight{
+    right : 85px;
+}
+        
+#head {
+    top:280px;
+}  
+}
+
+
+
+/* version smartphone */
+@media screen and (max-width:376px){
+    #earLeft {
+    left : 150px;
+}
+.containerMain{
+    grid-template-rows: 1fr, 1fr, 1fr, 1fr;
+    grid-template-columns:1fr;
+}
+
+.textPrincessMobile {
+    display:block;
+}
+
+.textPrincess{
+    display: none;
+}
+
+.title{
+    grid-row: 1/2;
+    grid-column: 1/2;
+    text-align: center;
+}
+.compteUser{
+    grid-row: 2/3;
+    grid-column: 1/2;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+}
+.compteComp{
+    grid-row: 3/4;
+    grid-column: 1/2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.arene {
+    grid-row: 4/5;
+    grid-column: 1/2;
+    position:relative;
+    height : 400px;
+    }
+
+    .containerPrincesses{
+        display: flex;
+        justify-content: space-around;
+       
+    }
+    #elsaPlayer{
+        content: url('../img/elsa_mobile.png');
+    }
+    #raiponcePlayer{
+        content: url('../img/raiponce_mobile.png');
+    }
+    #mulanPlayer{
+        content:url('../img/mulan_mobile.png');
+    }
+    
+    .imgprinc{
+        width:70px;
+        height:70px;
+    
+    }
+   
+    h1{
+        font-family: "waltograph",cursive;
+        font-size: 2.5em;
+    }
+
+    h2, .title p{
+        font-size:1em;
+    }
+
+    .title {
+        padding-bottom: 25px;
+    }
+    
+    .fa-user,.fa-desktop{
+        font-size: 1.5em;
+        line-height: 1em;
+        padding-top: 5px;
+        margin-left: 70px;
+    }
+
+    #user, #comp{
+        font-size: 1.5em;
+        line-height: 1em;
+        padding-top: 5px;
+        margin-right:70px;
+        ;
+    }
+    
+    #earLeft {
+    border-width: 5px;
+    width: 130px;
+    height:130px;
+    top : 30px;
+    left : 30px;
+    }
+    
+    #earRight{
+    border-width: 5px;
+    width: 130px;
+    height:130px;
+    top : 30px;
+    right : 30px;
+        }
+    
+    #head {
+        border-width: 5px;
+        width: 230px;
+        height:230px;
+        top:245px;
+                }
+    #imgHead {
+        width:150px;}
+
+    .textPrincessMobile {
+        font-family:'noto sans',sans-serif;
+        line-height: 1.5em;
+        padding-top:15px;
+        text-align: center;
+        color: white;
+        padding-bottom: 15px;
+        }
+        
+    .textPrincessMobile h3 {
+        line-height: 2em;
+        }
+        
+    .textPrincessMobile h3 span {
+        font-family: "waltograph",cursive;
+        font-size: 2em;
+        }
+
+    .textPrincessMobile p {
+        line-height: 2em;
+        }
+
+        #regles {
+            font-size:2.5em;
+            font-family: "waltograph",cursive;
+            color: white;
+            text-align: center;
+            padding-top:15px;
+            background:linear-gradient(90deg,#3cc0f8 0%,#d62566 100%);
+            background-clip: border-box;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent; }
+        
+            #result {
+            font-size: 2em;}
+
+}
+
+/*  Fin version smartphone */
+
+}

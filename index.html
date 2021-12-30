@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Shifumi Disney</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <main>
+        <section class="containerMain">
+            <div class="title">
+                <h1>Les princesses Disney</h1>
+                <h2>La bataille :</h2>
+                <p>Choisis ta princesse et défie l'ordinateur !</p>
+                <p id="result">Le premier qui arrive à 5 a gagné !</p>
+            </div>
+            <div class="compteUser">
+                <i class="fas fa-user"></i>  
+                <p id="user">0</p>
+            </div>
+            <div class="arene">
+                <div id="earRight">
+                    <img id="imgEarRight" src="" alt="">
+                </div>
+                <div id="head">
+                    <img id="imgHead" src="" alt="">
+                </div>
+                <div id="earLeft">
+                    <img id="imgEarLeft" src="" alt="">   
+                </div>
+            </div>
+            <div class="compteComp">
+                <i class="fas fa-desktop"></i>
+                <p id="comp">0</p>
+            </div>
+        </section>
+        <section class="containerPrincesses">
+            <div class="elsa">
+                <div>
+                    <img class="imgprinc" id="elsaPlayer" src="assets/img/elsa_dekstop.png" alt="Elsa">
+                </div> 
+                <div class="textPrincess">
+                    <h3 id="elsaTitle"><span>Elsa</span> : contrôle la glace</h3>
+                    <p><i class="fas fa-plus-circle"></i> 
+                    Elle gèle les pouvoirs</p>
+                    <p><i class="fas fa-minus-circle"></i>
+                    Sa glace se brise sous les coups</p>
+                </div>    
+            </div>
+            
+
+            <div class="raiponce">
+                <div>
+                    <img class="imgprinc" id="raiponcePlayer" src="assets/img/raiponce_dekstop.png" alt="Raiponce" >
+                </div>
+                <div class="textPrincess">
+                    <h3 id="raiponceTitle"><span>Raiponce</span> : guérit les blessures</h3>
+                    <p><i class="fas fa-plus-circle"></i> 
+                        Ne peut pas être blessée</p>
+                    <p><i class="fas fa-minus-circle"></i>
+                        Le froid la paralyse</p>
+                </div>
+            </div>  
+            <div class="mulan">
+                <div>
+                    <img class="imgprinc" id="mulanPlayer" src="assets/img/mulan_dekstop.png" alt="Mulan" >
+                </div>
+                <div class="textPrincess">
+                    <h3 id="mulanTitle"><span>Mulan</span> : attaque Kung Fu</h3>
+                    <p><i class="fas fa-plus-circle"></i> 
+                        Son attaque brise la glace</p>
+                    <p><i class="fas fa-minus-circle"></i>
+                        Impuissante face à la guérison</p>
+                </div>
+            </div>
+        </section>
+
+
+<!-- SECTION REGLE DU JEU POUR VERSION INTERMEDIAIRE ET SMARTPHONE -->
+        <section class="textMobile">
+            <p id="regles">Règles du jeu</p>
+            
+                <div class="textPrincessMobile">
+                    <h3 id="elsaTitle"><span>Elsa</span> : contrôle la glace</h3>
+                    <p><i class="fas fa-plus-circle"></i> 
+                    Elle gèle les pouvoirs</p>
+                    <p><i class="fas fa-minus-circle"></i>
+                    Sa glace se brise sous les coups</p>
+                </div>    
+        
+        
+                <div class="textPrincessMobile">
+                    <h3 id="raiponceTitle"><span>Raiponce</span> : guérit les blessures</h3>
+                    <p><i class="fas fa-plus-circle"></i> 
+                        Ne peut pas être blessée</p>
+                    <p><i class="fas fa-minus-circle"></i>
+                        Le froid la paralyse</p>
+                </div>
+                <div class="textPrincessMobile">
+                    <h3 id="mulanTitle"><span>Mulan</span> : attaque Kung Fu</h3>
+                    <p><i class="fas fa-plus-circle"></i> 
+                        Son attaque brise la glace</p>
+                    <p><i class="fas fa-minus-circle"></i>
+                        Impuissante face à la guérison</p>
+                </div>
+        </section>
+
+<!-- FIN SECTION REGLE DU JEU POUR SMARTPHONE -->
+
+    </main>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="assets/js/script.js"></script>    
+</body>
+</html>
